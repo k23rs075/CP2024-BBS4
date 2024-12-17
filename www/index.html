@@ -252,6 +252,7 @@ function loadPosts() {
             posts.sort((a, b) => a.timestamp - b.timestamp);
         }
 
+        
         renderPosts(posts);
         $('#loadingSpinner').hide();
     }, (error) => {
@@ -259,6 +260,17 @@ function loadPosts() {
         showMessage('データの読み込みに失敗しました', 'error');
         $('#loadingSpinner').hide();
     });
+}
+
+//テーマの適用
+function theme(){
+    const sortOrder1 = $('#sortOrder1').val();
+    $('#loadingSpinner').show();
+        if(sortOrder1=='light'){
+            document.body.style.backgroundColor='white';
+        }else{
+            document.body.style.backgroundColor='black';
+        }
 }
 
 // モーダル関連の関数
@@ -553,7 +565,7 @@ window.addEventListener('unload', function() {
                 <label for="contentInput">投稿内容</label>
                 <textarea id="contentInput" class="form-control" 
                           placeholder="投稿内容を入力してください"></textarea>
-                <small class="character-count" id="contentCount">0/1000</small>
+                <small class="character-count" id="contentCount"></small>
             </div>
             <div class="button-group">
                 <button id="postButton" class="btn-primary">投稿する</button>
@@ -579,9 +591,9 @@ window.addEventListener('unload', function() {
         <div class="theme">
             <h100>テーマ切り替え</h100>
             <div class="theme-control">
-                <select id="sortOrder1" class="form-control">
-                    <option value="newest">ライト</option>
-                    <option value="oldest">ダーク</option>
+                <select id="themeSelect" class="form-control">
+                    <option value="light">ライト</option>
+                    <option value="dark">ダーク</option>
                 </select>
             </div>
             <div id="postsList"></div>

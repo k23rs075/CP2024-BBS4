@@ -171,6 +171,28 @@ textarea.form-control {
     min-width: 120px;
 }
 
+/*モード切替*/
+.theme {
+    margin-top: 30px;
+}
+
+.theme h100 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.theme-control {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#sortOrder1 {
+    width: auto;
+    min-width: 120px;
+}
+
 /* 投稿カード */
 .post {
     background: white;
