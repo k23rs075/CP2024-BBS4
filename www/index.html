@@ -252,6 +252,13 @@ function loadPosts() {
             posts.sort((a, b) => a.timestamp - b.timestamp);
         }
 
+        //テーマの変更
+        if(themeSelect=='light'){
+            document.body.style.backgroundColor='white';
+        }else{
+            document.body.style.backgroundColor='black';
+        }
+
         
         renderPosts(posts);
         $('#loadingSpinner').hide();
@@ -263,15 +270,16 @@ function loadPosts() {
 }
 
 //テーマの適用
+/*
 function theme(){
-    const sortOrder1 = $('#sortOrder1').val();
+    const themeSelect = $('#themeSelect').val();
     $('#loadingSpinner').show();
-        if(sortOrder1=='light'){
+        if(themeSelect=='light'){
             document.body.style.backgroundColor='white';
         }else{
             document.body.style.backgroundColor='black';
         }
-}
+}*/
 
 // モーダル関連の関数
 function showModal(modalId) {

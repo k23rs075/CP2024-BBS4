@@ -188,9 +188,19 @@ textarea.form-control {
     justify-content: flex-end;
 }
 
-#sortOrder1 {
+#themeSelect {
     width: auto;
     min-width: 120px;
+}
+
+.light-theme {
+  background-color: #f0f0f0; /* ライトテーマの背景色 */
+  color: #333; /* 文字色 */
+}
+
+.dark-theme {
+  background-color: #333; /* ダークテーマの背景色 */
+  color: #fff; /* 文字色 */
 }
 
 /* 投稿カード */
