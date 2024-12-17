@@ -57,7 +57,7 @@ function updateCharacterCount(inputId, counterId, maxLength) {
     
     input.on('input', () => {
         const length = input.val().length;
-        counter.text(`${length}/${maxLength}`);
+        counter.text(`残り${maxLength-length}文字`);
     
         if (length > maxLength) {
             counter.addClass('error');
@@ -567,6 +567,21 @@ window.addEventListener('unload', function() {
                 <select id="sortOrder" class="form-control">
                     <option value="newest">新しい順</option>
                     <option value="oldest">古い順</option>
+                </select>
+            </div>
+            <div id="postsList"></div>
+            <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+                <div class="spinner"></div>
+                <p>読み込み中...</p>
+            </div>
+        </div>
+
+        <div class="theme">
+            <h100>テーマ切り替え</h100>
+            <div class="theme-control">
+                <select id="sortOrder1" class="form-control">
+                    <option value="newest">ライト</option>
+                    <option value="oldest">ダーク</option>
                 </select>
             </div>
             <div id="postsList"></div>
