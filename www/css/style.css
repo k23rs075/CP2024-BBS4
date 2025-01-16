@@ -91,10 +91,15 @@ textarea.form-control {
     color: #6c757d;
     font-size: 12px;
 }
+.character-count.warning {
+    color: orange;
+}
 
 .character-count.error {
-    color: #dc3545;
+    color: red;
 }
+
+
 
 /* ボタン */
 .button-group {
