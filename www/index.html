@@ -73,8 +73,8 @@ function validateContent(content) {
         showMessage('投稿内容を入力してください', 'error');
         return false;
     }
-    if (content.length > 1000) {
-        showMessage('投稿内容は1000文字以内で入力してください', 'error');
+    if (content.length > 140) {
+        showMessage('投稿内容は140文字以内で入力してください', 'error');
         return false;
     }
     return true;
@@ -495,7 +495,7 @@ $(function() {
      });
 
     // 文字数カウンターの初期化
-    updateCharacterCount('contentInput', 'contentCount', 1000);
+    updateCharacterCount('contentInput', 'contentCount', 140);
 
     // 投稿処理
     $('#postButton').on('click', function() {
